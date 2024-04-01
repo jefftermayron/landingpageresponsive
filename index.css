@@ -1,0 +1,114 @@
+html{
+    height: 100%;
+}
+body{
+    background-image: url(imagens/fundo.jpg);
+    background-size: cover; /* Cobrir toda a área do corpo */
+    background-position: center; /* Centralizar a imagem */
+    background-repeat: no-repeat; /* Evitar a repetição da imagem */
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 12%;
+}
+.left, .right {
+    padding: 20px;
+    text-align: center;
+}
+
+.left{
+    width: 25%;
+    background-color: rgba(255, 255, 255, 0.2); /* Cor de fundo com transparência */
+    border-radius: 10px 0px 0px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    backdrop-filter: blur(10px); /* Efeito de desfoque para navegadores que suportam */
+}
+.left h1{
+    color: #000000;
+}
+.left h2{
+    color: #000000;
+}
+.left p{
+    color: #000000;
+}
+.right{
+    width: 25%;
+    background-color: rgba(0, 0, 0, 0.2); /* Cor de fundo com transparência */
+    border-radius: 0px 10px 10px 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    backdrop-filter: blur(10px); /* Efeito de desfoque para navegadores que suportam */
+}
+.right h1, h2, p{
+    color: #fff;
+}
+.right .formulario{
+    padding: 10px;
+}
+
+.right .formulario input[type="text"], input[type="email"], textarea{
+    padding: 10px;
+    width: 100%;
+    border: 0px;
+    border-radius: 5px;
+}
+.right .formulario input[type="submit"]{
+    color: rgb(54, 54, 54);
+    border: 0;
+    border-radius: 5px;
+    width: 90%;
+    height: 50px;
+}
+.depoimentos{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.depoimentos .fotoperfil{
+    border-radius: 99px;
+}
+.depoimentos .fotoperfil .imagem img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100px; 
+    padding: 10px;
+
+}
+
+.depoimentos p{
+    color: #000000;
+}
+
+@media (max-width: 1024px){
+    .left, .right{
+        width: 40%;
+    }
+}
+
+@media (max-width: 500px) {
+    html{
+        height: 1400px;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-direction: column;
+        margin-left: 12%;
+    }
+    .left, .right{
+        width: 75%;
+    }
+    .left{
+        border-radius: 10px 10px 0 0;
+    }
+    .right{
+        border-radius: 0 0 10px 10px;
+    }
+    
+}
+
